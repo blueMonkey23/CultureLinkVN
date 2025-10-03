@@ -1,0 +1,19 @@
+SELECT ?heritage ?heritageLabel ?coord ?image ?provinceLabel ?heritageDescription WHERE {
+  ?heritage wdt:P17 wd:Q881;
+            wdt:P625 ?coord;
+            wdt:P1435 ?unesco;
+            wdt:P131 ?province.
+  OPTIONAL { ?heritage wdt:P18 ?image. }
+  
+  # Chỉ lấy description tiếng Việt
+  OPTIONAL { ?heritage schema:description ?heritageDescription 
+             FILTER (LANG(?heritageDescription) = "vi") }
+  
+  # Nếu không có tiếng Việt thì fallback sang tiếng Anh
+  OPTIONAL { ?heritage schema:description ?heritageDescriptionEn 
+             FILTER (LANG(?heritageDescriptionEn) = "en") }
+  
+  BIND(COALESCE(?heritageDescription, ?heritageDescriptionEn) AS ?heritageDescriptionFinal)
+  
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "vi,en". }
+}
