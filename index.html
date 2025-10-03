@@ -15,17 +15,36 @@
     </div>
   </header>
 
-  <main>
-    <div id="map"></div>
-    <section id="dashboard">
-      <canvas id="chart" width="400" height="200"></canvas>
-    </section>
-  </main>
+  <main id="container">
+  <div id="map"></div>
+
+  <!-- Thanh kéo resize -->
+  <div id="resizeHandle"></div>
+  <!-- Panel kéo lên xuống -->
+  <div id="bottomPanel">
+    <h2>Thống kê</h2>
+
+    <!-- Bộ lọc tỉnh -->
+    <label for="provinceFilter"><b>Lọc theo tỉnh:</b></label><br>
+    <select id="provinceFilter" onchange="filterByProvince()">
+      <option value="all">Tất cả</option>
+    </select>
+
+    <!-- Thống kê số lượng -->
+    <p id="stats"></p>
+
+    <!-- Biểu đồ -->
+    <div id="chartContainer">
+      <canvas id="chart"></canvas>
+    </div>
+  </div>
+  <!-- Nút hiện/ẩn panel -->
+  <button id="togglePanelBtn">Hiện/Ẩn thống kê</button>
+</main>
 
   <!-- Libraries -->
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
   <!-- File JS -->
   <script src="app.js"></script>
 </body>

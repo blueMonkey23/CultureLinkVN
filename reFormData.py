@@ -1,6 +1,5 @@
 import json
 
-# Mapping thủ công huyện/xã → tỉnh/thành
 province_mapping = {
     "Bố Trạch": "Quảng Bình",
     "Minh Hóa": "Quảng Bình",
@@ -14,22 +13,21 @@ province_mapping = {
     "Long Biên": "Hà Nội",
     "Duy Xuyên": "Quảng Nam",
     "Thuận Thành": "Bắc Ninh",
+    "Thành phố Huế": "Thừa Thiên Huế",
+    "TP Hạ Long": "Quảng Ninh"
 }
 
-# Đọc file JSON raw tải từ Wikidata
 with open("query2.json", "r", encoding="utf-8") as f:
     raw_data = json.load(f)
 
 simplified = []
-
 for item in raw_data:
     name = item.get("heritageLabel", "")
     coord = item.get("coord", "")
     image = item.get("image", "")
     province = item.get("provinceLabel", "")
-
-    # Normalize province nếu có mapping
     province = province_mapping.get(province, province)
+    description = item.get("heritageDescription", "") or item.get("heritageDescriptionEn", "")
 
     lat, lon = None, None
     if coord.startswith("Point("):
@@ -43,11 +41,9 @@ for item in raw_data:
             "lon": lon,
             "province": province,
             "image": image,
-            "description": item.get("heritageDescription", "")
+            "description": description
         })
 
-
-# Ghi ra file JSON gọn
 with open("heritage2.json", "w", encoding="utf-8") as f:
     json.dump(simplified, f, ensure_ascii=False, indent=2)
 
