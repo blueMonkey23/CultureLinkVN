@@ -1,3 +1,6 @@
+# Copyright (c) 2024 CultureLinkVN
+# License: MIT
+
 import json
 
 province_mapping = {
@@ -17,7 +20,8 @@ province_mapping = {
     "TP Hạ Long": "Quảng Ninh"
 }
 
-with open("query2.json", "r", encoding="utf-8") as f:
+# Đổi sang file query3.json để lấy đủ trường wikipedia
+with open("query3.json", "r", encoding="utf-8") as f:
     raw_data = json.load(f)
 
 simplified = []
@@ -27,8 +31,13 @@ for item in raw_data:
     image = item.get("image", "")
     province = item.get("provinceLabel", "")
     province = province_mapping.get(province, province)
-    description = item.get("heritageDescription", "") or item.get("heritageDescriptionEn", "")
-    heritage = item.get("heritage", "")  # Lấy link wikidata
+    description = (
+        item.get("heritageDescription", "")
+        or item.get("heritageDescriptionFinal", "")
+        or item.get("heritageDescriptionEn", "")
+    )
+    heritage = item.get("heritage", "")
+    wikipedia = item.get("wikipedia", "")
 
     lat, lon = None, None
     if coord.startswith("Point("):
@@ -43,10 +52,11 @@ for item in raw_data:
             "province": province,
             "image": image,
             "description": description,
-            "heritage": heritage  # Thêm trường này vào output
+            "heritage": heritage,
+            "wikipedia": wikipedia
         })
 
-with open("heritage3.json", "w", encoding="utf-8") as f:
+with open("heritage4.json", "w", encoding="utf-8") as f:
     json.dump(simplified, f, ensure_ascii=False, indent=2)
 
 print("Đã tạo heritage.json với", len(simplified), "địa điểm UNESCO")

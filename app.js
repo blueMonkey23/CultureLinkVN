@@ -1,3 +1,8 @@
+/*
+  Copyright (c) 2024 CultureLinkVN
+  License: MIT
+*/
+
 // Khởi tạo bản đồ
 var map = L.map('map').setView([16.047079, 108.206230], 6);
 
@@ -21,14 +26,18 @@ function renderMarkers(data) {
       <i>${item.province}</i><br>
       <p>${item.description || "Chưa có mô tả"}</p>
       <img src="${item.image}" alt="Chưa có ảnh" width="200" /><br>
-      ${item.heritage ? `<a href="${item.heritage}" target="_blank">Xem trên Wikidata</a>` : ""}
+      ${
+        item.wikipedia
+          ? `<a href="${item.wikipedia}" target="_blank">Xem trên Wikipedia</a>`
+          : (item.heritage ? `<a href="${item.heritage}" target="_blank">Xem trên Wikidata</a>` : "")
+      }
     `);
     allMarkers.push(marker);
   });
 }
 
 // Load dữ liệu JSON
-fetch('heritage3.json')
+fetch('heritage4.json')
   .then(res => res.json())
   .then(data => {
     globalData = data;
