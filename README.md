@@ -25,19 +25,24 @@ CultureLinkVN/
 ├─ README.md
 
 │
+
 ├─ data/
 
-│   ├─ heritage.json   # Processed data for the web
+│   
+├─ heritage.json   # Processed data for the web
 
-│   ├─ query.json      # Raw data from Wikidata
+│   
+├─ query.json      # Raw data from Wikidata
 
 │
 
 ├─ scripts/
 
-│   ├─ reFormData.py   # Python script to process JSON
+│   
+├─ reFormData.py   # Python script to process JSON
 
-│   ├─ wikiDataQuery.txt # SPARQL query
+│   
+├─ wikiDataQuery.txt # SPARQL query
 
 
 
