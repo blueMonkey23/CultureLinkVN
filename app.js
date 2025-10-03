@@ -9,6 +9,31 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 let allMarkers = [];
 let globalData = [];
 
+// Hàm mở Google Maps để chỉ đường
+function openGoogleMapsDirections(lat, lng, locationName) {
+  // Lấy vị trí hiện tại của người dùng
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition((position) => {
+      const origin = `${position.coords.latitude},${position.coords.longitude}`;
+      const destination = `${lat},${lng}`;
+      
+      // Tạo URL chỉ đường Google Maps
+      const url = `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${destination}&destination_place_id=${locationName}`;
+      
+      // Mở trong tab mới
+      window.open(url, '_blank');
+    }, () => {
+      // Nếu không lấy được vị trí, chỉ mở địa điểm đích
+      const url = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}&destination_place_id=${locationName}`;
+      window.open(url, '_blank');
+    });
+  } else {
+    // Nếu trình duyệt không hỗ trợ geolocation
+    const url = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}&destination_place_id=${locationName}`;
+    window.open(url, '_blank');
+  }
+}
+
 // Hàm render marker
 function renderMarkers(data) {
   allMarkers.forEach(m => map.removeLayer(m));
@@ -17,11 +42,14 @@ function renderMarkers(data) {
   data.forEach(item => {
     var marker = L.marker([item.lat, item.lon]).addTo(map);
     marker.bindPopup(`
-  <b>${item.name}</b><br>
-  <i>${item.province}</i><br>
-  <p>${item.description || "Chưa có mô tả"}</p>
-  <img src="${item.image}" alt="Chưa có ảnh" width="200" />
-`);
+      <b>${item.name}</b><br>
+      <i>${item.province}</i><br>
+      <p>${item.description || "Chưa có mô tả"}</p>
+      <img src="${item.image}" alt="Chưa có ảnh" width="200" /><br>
+      <button onclick="openGoogleMapsDirections(${item.lat}, ${item.lon}, '${item.name.replace(/'/g, "\\'")}')">
+        Chỉ đường đến đây
+      </button>
+    `);
     allMarkers.push(marker);
   });
 }
