@@ -15,21 +15,30 @@ The project allows users to search, filter by province, view statistics and char
 📂 Project Structure
 CultureLinkVN/
 │
+
 ├─ index.html          # Main interface
+
 ├─ style.css           # Stylesheet
+
 ├─ app.js              # Main logic
+
 ├─ README.md
+
 │
 ├─ data/
+
 │   ├─ heritage.json   # Processed data for the web
+
 │   ├─ query.json      # Raw data from Wikidata
+
 │
+
 ├─ scripts/
+
 │   ├─ reFormData.py   # Python script to process JSON
+
 │   ├─ wikiDataQuery.txt # SPARQL query
-│
-└─ assets/
-    └─ images/         # Images (if any)
+
 
 
 
