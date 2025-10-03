@@ -21,7 +21,7 @@ province_mapping = {
 }
 
 
-with open("query.json", "r", encoding="utf-8") as f:
+with open("data/query.json", "r", encoding="utf-8") as f:
     raw_data = json.load(f)
 
 simplified = []
@@ -56,7 +56,7 @@ for item in raw_data:
             "wikipedia": wikipedia
         })
 
-with open("heritage.json", "w", encoding="utf-8") as f:
+with open("data/heritage.json", "w", encoding="utf-8") as f:
     json.dump(simplified, f, ensure_ascii=False, indent=2)
 
 print("Đã tạo heritage.json với", len(simplified), "địa điểm UNESCO")

@@ -37,7 +37,7 @@ function renderMarkers(data) {
 }
 
 // Load dữ liệu JSON
-fetch('heritage4.json')
+fetch('data/heritage.json')
   .then(res => res.json())
   .then(data => {
     globalData = data;
