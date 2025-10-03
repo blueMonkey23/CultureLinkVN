@@ -28,6 +28,7 @@ for item in raw_data:
     province = item.get("provinceLabel", "")
     province = province_mapping.get(province, province)
     description = item.get("heritageDescription", "") or item.get("heritageDescriptionEn", "")
+    heritage = item.get("heritage", "")  # Lấy link wikidata
 
     lat, lon = None, None
     if coord.startswith("Point("):
@@ -41,10 +42,11 @@ for item in raw_data:
             "lon": lon,
             "province": province,
             "image": image,
-            "description": description
+            "description": description,
+            "heritage": heritage  # Thêm trường này vào output
         })
 
-with open("heritage2.json", "w", encoding="utf-8") as f:
+with open("heritage3.json", "w", encoding="utf-8") as f:
     json.dump(simplified, f, ensure_ascii=False, indent=2)
 
 print("Đã tạo heritage.json với", len(simplified), "địa điểm UNESCO")

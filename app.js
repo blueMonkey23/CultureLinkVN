@@ -17,17 +17,18 @@ function renderMarkers(data) {
   data.forEach(item => {
     var marker = L.marker([item.lat, item.lon]).addTo(map);
     marker.bindPopup(`
-  <b>${item.name}</b><br>
-  <i>${item.province}</i><br>
-  <p>${item.description || "Chưa có mô tả"}</p>
-  <img src="${item.image}" alt="Chưa có ảnh" width="200" />
-`);
+      <b>${item.name}</b><br>
+      <i>${item.province}</i><br>
+      <p>${item.description || "Chưa có mô tả"}</p>
+      <img src="${item.image}" alt="Chưa có ảnh" width="200" /><br>
+      ${item.heritage ? `<a href="${item.heritage}" target="_blank">Xem trên Wikidata</a>` : ""}
+    `);
     allMarkers.push(marker);
   });
 }
 
 // Load dữ liệu JSON
-fetch('heritage2.json')
+fetch('heritage3.json')
   .then(res => res.json())
   .then(data => {
     globalData = data;
