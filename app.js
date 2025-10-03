@@ -31,6 +31,9 @@ function renderMarkers(data) {
           ? `<a href="${item.wikipedia}" target="_blank">Xem trên Wikipedia</a>`
           : (item.heritage ? `<a href="${item.heritage}" target="_blank">Xem trên Wikidata</a>` : "")
       }
+      <button onclick="openGoogleMapsDirections(${item.lat}, ${item.lon}, '${item.name.replace(/'/g, "\\'")}')">
+        Chỉ đường đến đây
+      </button>
     `);
     allMarkers.push(marker);
   });
@@ -46,6 +49,31 @@ fetch('data/heritage.json')
     updateStats(data);
     populateProvinceFilter(data);
   });
+
+// Hàm mở Google Maps để chỉ đường
+function openGoogleMapsDirections(lat, lng, locationName) {
+  // Lấy vị trí hiện tại của người dùng
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition((position) => {
+      const origin = `${position.coords.latitude},${position.coords.longitude}`;
+      const destination = `${lat},${lng}`;
+      
+      // Tạo URL chỉ đường Google Maps
+      const url = `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${destination}&destination_place_id=${locationName}`;
+      
+      // Mở trong tab mới
+      window.open(url, '_blank');
+    }, () => {
+      // Nếu không lấy được vị trí, chỉ mở địa điểm đích
+      const url = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}&destination_place_id=${locationName}`;
+      window.open(url, '_blank');
+    });
+  } else {
+    // Nếu trình duyệt không hỗ trợ geolocation
+    const url = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}&destination_place_id=${locationName}`;
+    window.open(url, '_blank');
+  }
+}
 
 function populateProvinceFilter(data) {
   const provinces = [...new Set(data.map(item => item.province))].sort();
