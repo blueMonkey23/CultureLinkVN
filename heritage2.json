@@ -1,5 +1,13 @@
 [
   {
+    "name": "Vịnh Hạ Long",
+    "lat": 20.9100,
+    "lon": 107.1839,
+    "province": "Quảng Ninh",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Ha_Long_Bay_2019.jpg",
+    "description": "Di sản thiên nhiên thế giới với hơn 1600 hòn đảo đá vôi, là biểu tượng du lịch của Việt Nam"
+  },
+  {
     "name": "Vườn quốc gia Mũi Cà Mau",
     "lat": 8.675,
     "lon": 104.79166667,
@@ -14,6 +22,30 @@
     "province": "Hà Nội",
     "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Main%20Gate%20-%20Citadel%20of%20Hanoi.jpg",
     "description": "quần thể các tòa nhà lịch sử nằm ở trung tâm Hà Nội, Việt Nam"
+  },
+  {
+    "name": "Phố cổ Hội An",
+    "lat": 15.8801,
+    "lon": 108.3261,
+    "province": "Quảng Nam",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/6/66/Hoi_An_Ancient_Town.jpg",
+    "description": "Di sản văn hóa thế giới, phố cổ thương mại từ thế kỷ 15-19 với kiến trúc độc đáo"
+  },
+  {
+    "name": "Tràng An",
+    "lat": 20.2500,
+    "lon": 105.8833,
+    "province": "Ninh Bình",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Trang_An_Scenic_Landscape_Complex.jpg",
+    "description": "Di sản hỗn hợp với cảnh quan thiên nhiên và di tích lịch sử văn hóa"
+  },
+  {
+    "name": "Thác Bản Giốc",
+    "lat": 22.8553,
+    "lon": 106.7249,
+    "province": "Cao Bằng",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Ban_Gioc_Detian_Falls.jpg",
+    "description": "Thác nước lớn nhất Đông Nam Á nằm trên biên giới Việt-Trung"
   },
   {
     "name": "Thánh địa Mỹ Sơn",
