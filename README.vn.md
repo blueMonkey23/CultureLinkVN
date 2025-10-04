@@ -1,5 +1,7 @@
 🌏 CultureLinkVN
+
 [English README](README.md) | [Tiếng Việt](README.vn.md)
+
 CultureLinkVN là một ứng dụng bản đồ tương tác, giới thiệu các di sản thế giới UNESCO tại Việt Nam.
 Dự án cho phép người dùng tìm kiếm, lọc theo tỉnh/thành, xem thống kê và biểu đồ, cũng như nhận chỉ đường đến từng địa điểm di sản.
 
@@ -71,4 +73,5 @@ Giấy phép MIT © 2024 CultureLinkVN
 
 📬 Liên hệ
 Nếu có lỗi, đề xuất hoặc muốn đóng góp, vui lòng mở issue hoặc pull request trên GitHub, hoặc liên hệ nhóm phát triển qua email.
+
 
