@@ -26,8 +26,16 @@
 
     <!-- Bộ lọc tỉnh -->
     <label for="provinceFilter"><b>Lọc theo tỉnh:</b></label><br>
-    <select id="provinceFilter" onchange="filterByProvince()">
+    <select id="provinceFilter" onchange="filterData()">
       <option value="all">Tất cả</option>
+    </select>
+    <br>
+    <!-- Bộ lọc loại -->
+    <label for="typeFilter"><b>Lọc theo loại:</b></label><br>
+    <select id="typeFilter" onchange="filterData()">
+      <option value="all">Tất cả</option>
+      <option value="heritage">Di sản</option>
+      <option value="museum">Bảo tàng</option>
     </select>
 
     <!-- Thống kê số lượng -->

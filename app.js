@@ -38,7 +38,6 @@ const heritageIcon = L.icon({
 function renderMarkers(data) {
   allMarkers.forEach(m => map.removeLayer(m));
   allMarkers = [];
-
   data.forEach(item => {
     let icon = item.type === 'museum' ? museumIcon : heritageIcon;
     var marker = L.marker([item.lat, item.lon], {icon}).addTo(map);
@@ -116,11 +115,15 @@ function populateProvinceFilter(data) {
   });
 }
 
-function filterByProvince() {
-  const selected = document.getElementById('provinceFilter').value;
+function filterData() {
+  const province = document.getElementById('provinceFilter').value;
+  const type = document.getElementById('typeFilter').value;
   let filtered = globalData;
-  if (selected !== "all") {
-    filtered = globalData.filter(item => item.province === selected);
+  if (province !== "all") {
+    filtered = filtered.filter(item => item.province === province);
+  }
+  if (type !== "all") {
+    filtered = filtered.filter(item => item.type === type);
   }
   renderMarkers(filtered);
   showChart(filtered);
