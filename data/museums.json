@@ -1,0 +1,382 @@
+[
+  {
+    "name": "Bảo tàng Thành phố Hồ Chí Minh",
+    "lat": 10.77611111,
+    "lon": 106.69972222,
+    "province": "TP.HCM",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/B%E1%BA%A3o%20t%C3%A0ng%20Th%C3%A0nh%20ph%E1%BB%91%20H%E1%BB%93%20Ch%C3%AD%20Minh%207.jpg",
+    "description": "bảo tàng ở Thành phố Hồ Chí Minh, Việt Nam",
+    "heritage": "http://www.wikidata.org/entity/Q864767",
+    "wikipedia": "https://vi.wikipedia.org/wiki/Bảo_tàng_Thành_phố_Hồ_Chí_Minh"
+  },
+  {
+    "name": "Bảo tàng Dân tộc học Việt Nam",
+    "lat": 21.040555555,
+    "lon": 105.798333333,
+    "province": "Hà Nội",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dan%20toc%20hoc%201.jpg",
+    "description": "museum in Hanoi, Vietnam",
+    "heritage": "http://www.wikidata.org/entity/Q1048345",
+    "wikipedia": "https://vi.wikipedia.org/wiki/Bảo_tàng_Dân_tộc_học_Việt_Nam"
+  },
+  {
+    "name": "Bảo tàng Dân tộc học Việt Nam",
+    "lat": 21.0406,
+    "lon": 105.799,
+    "province": "Hà Nội",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dan%20toc%20hoc%201.jpg",
+    "description": "museum in Hanoi, Vietnam",
+    "heritage": "http://www.wikidata.org/entity/Q1048345",
+    "wikipedia": "https://vi.wikipedia.org/wiki/Bảo_tàng_Dân_tộc_học_Việt_Nam"
+  },
+  {
+    "name": "Bảo tàng Dân tộc học Việt Nam",
+    "lat": 21.040555555,
+    "lon": 105.798333333,
+    "province": "Hà Nội",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tr%E1%BB%91ng%20%C4%90%E1%BB%93ng%20building%2C%20Vietnam%20Museum%20of%20Ethnology.jpg",
+    "description": "museum in Hanoi, Vietnam",
+    "heritage": "http://www.wikidata.org/entity/Q1048345",
+    "wikipedia": "https://vi.wikipedia.org/wiki/Bảo_tàng_Dân_tộc_học_Việt_Nam"
+  },
+  {
+    "name": "Bảo tàng Dân tộc học Việt Nam",
+    "lat": 21.0406,
+    "lon": 105.799,
+    "province": "Hà Nội",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tr%E1%BB%91ng%20%C4%90%E1%BB%93ng%20building%2C%20Vietnam%20Museum%20of%20Ethnology.jpg",
+    "description": "museum in Hanoi, Vietnam",
+    "heritage": "http://www.wikidata.org/entity/Q1048345",
+    "wikipedia": "https://vi.wikipedia.org/wiki/Bảo_tàng_Dân_tộc_học_Việt_Nam"
+  },
+  {
+    "name": "Hỏa Lò",
+    "lat": 21.025277777,
+    "lon": 105.846388888,
+    "province": "Hà Nội",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/HanoiHilton.jpg",
+    "description": "nhà tù ở Hà Nội, Việt Nam",
+    "heritage": "http://www.wikidata.org/entity/Q1359941",
+    "wikipedia": "https://vi.wikipedia.org/wiki/Hỏa_Lò"
+  },
+  {
+    "name": "Bảo tàng Hà Nội",
+    "lat": 21.011,
+    "lon": 105.786,
+    "province": "Hà Nội",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hanoi%20Museum.jpg",
+    "description": "Bảo tàng tại Hà Nội",
+    "heritage": "http://www.wikidata.org/entity/Q1835176",
+    "wikipedia": "https://vi.wikipedia.org/wiki/Bảo_tàng_Hà_Nội"
+  },
+  {
+    "name": "Bảo tàng Cần Thơ",
+    "lat": 10.0352,
+    "lon": 105.7867,
+    "province": "Cần Thơ",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Can%20Tho%20Museum.jpg",
+    "description": "",
+    "heritage": "http://www.wikidata.org/entity/Q5029086",
+    "wikipedia": "https://vi.wikipedia.org/wiki/Bảo_tàng_Cần_Thơ"
+  },
+  {
+    "name": "Bảo tàng Cách mạng Việt Nam",
+    "lat": 21.0253,
+    "lon": 105.8587,
+    "province": "Hà Nội",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vietnam%20Museum%20of%20Revolution.JPG",
+    "description": "",
+    "heritage": "http://www.wikidata.org/entity/Q5370340",
+    "wikipedia": "https://vi.wikipedia.org/wiki/Bảo_tàng_Cách_mạng_Việt_Nam"
+  },
+  {
+    "name": "Khu di tích Phủ Chủ tịch",
+    "lat": 21.037901,
+    "lon": 105.833547,
+    "province": "Hà Nội",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ho%20Chi%20Minh%20House%201463237026%205317a7aaed.jpg",
+    "description": "Nơi sống và làm việc của Hồ Chủ tịch lúc sinh thời",
+    "heritage": "http://www.wikidata.org/entity/Q5370392",
+    "wikipedia": "https://vi.wikipedia.org/wiki/Khu_di_tích_Phủ_Chủ_tịch"
+  },
+  {
+    "name": "Bảo tàng Lịch sử Việt Nam",
+    "lat": 21.024722222,
+    "lon": 105.859722222,
+    "province": "Hà Nội",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vietnam%20National%20Museum%20of%20History%2C%20Hanoi%2C%20Vietnam.jpg",
+    "description": "bảo tàng lịch sử quốc gia ở Hà Nội, Việt Nam",
+    "heritage": "http://www.wikidata.org/entity/Q5370414",
+    "wikipedia": "https://vi.wikipedia.org/wiki/Bảo_tàng_Lịch_sử_Việt_Nam"
+  },
+  {
+    "name": "Bảo tàng Văn hóa Sa Huỳnh",
+    "lat": 15.877005,
+    "lon": 108.326415,
+    "province": "Quảng Nam",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Sa%20Huynh%20Museum%2C%20Hoi%20An.jpg",
+    "description": "",
+    "heritage": "http://www.wikidata.org/entity/Q6941009",
+    "wikipedia": "https://vi.wikipedia.org/wiki/Bảo_tàng_Văn_hóa_Sa_Huỳnh"
+  },
+  {
+    "name": "Bảo tàng Gốm sứ Mậu dịch",
+    "lat": 15.877233,
+    "lon": 108.329677,
+    "province": "Quảng Nam",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/H%E1%BB%99i%20An%2C%20Museum%20of%20Trade%20Ceramics%2C%202020-01%20CN-02.jpg",
+    "description": "bảo tàng",
+    "heritage": "http://www.wikidata.org/entity/Q6941034",
+    "wikipedia": "https://vi.wikipedia.org/wiki/Bảo_tàng_Gốm_sứ_Mậu_dịch"
+  },
+  {
+    "name": "Bảo tàng Lịch sử Thành phố Hồ Chí Minh",
+    "lat": 10.78484,
+    "lon": 106.70759,
+    "province": "TP.HCM",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vietnam%20History%20Museum%20HCMC.JPG",
+    "description": "bảo tàng lịch sử ở Thành phố Hồ Chí Minh, Việt Nam",
+    "heritage": "http://www.wikidata.org/entity/Q6941045",
+    "wikipedia": "https://vi.wikipedia.org/wiki/Bảo_tàng_Lịch_sử_Thành_phố_Hồ_Chí_Minh"
+  },
+  {
+    "name": "Bảo tàng Alexandre Yersin",
+    "lat": 12.2515,
+    "lon": 109.196,
+    "province": "Khánh Hòa",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Yersin%20Museum%20%28Nha%20Trang%29.jpg",
+    "description": "museum",
+    "heritage": "http://www.wikidata.org/entity/Q8052668",
+    "wikipedia": "https://vi.wikipedia.org/wiki/Bảo_tàng_Alexandre_Yersin"
+  },
+  {
+    "name": "Bảo tàng Chiến thắng B52",
+    "lat": 21.035555555,
+    "lon": 105.826111111,
+    "province": "Hà Nội",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/B-52%20tail%20section%20and%20museum%20building.jpg",
+    "description": "military museum in Ba Đình district, Hanoi",
+    "heritage": "http://www.wikidata.org/entity/Q10743280",
+    "wikipedia": "https://vi.wikipedia.org/wiki/Bảo_tàng_Chiến_thắng_B52"
+  },
+  {
+    "name": "Bảo tàng Phụ nữ Việt Nam",
+    "lat": 21.023463,
+    "lon": 105.851619,
+    "province": "Hà Nội",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vietnamese%20Women%27s%20Museum%2C%20Women%27s%20Fashion%20section.JPG",
+    "description": "museum in Hanoi dedicated to Vietnamese women",
+    "heritage": "http://www.wikidata.org/entity/Q10743287",
+    "wikipedia": "https://vi.wikipedia.org/wiki/Bảo_tàng_Phụ_nữ_Việt_Nam"
+  },
+  {
+    "name": "Bến Nhà Rồng",
+    "lat": 10.76824,
+    "lon": 106.706799,
+    "province": "TP.HCM",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Ho%20Chi%20Minh%20Museum%2C%20Saigon.jpg",
+    "description": "bảo tàng Hồ Chí Minh",
+    "heritage": "http://www.wikidata.org/entity/Q10743440",
+    "wikipedia": "https://vi.wikipedia.org/wiki/Bến_Nhà_Rồng"
+  },
+  {
+    "name": "Bảo tàng Quân khu 5, Đà Nẵng",
+    "lat": 16.0487,
+    "lon": 108.218,
+    "province": "Đà Nẵng",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/B%E1%BA%A3o%20T%C3%A0ng%20Khu%205%2C%20Zone%205%20Military%20Museum%2C%20Da%20Nang%2C%202016.jpg",
+    "description": "military museum in Da Nang, Vietnam",
+    "heritage": "http://www.wikidata.org/entity/Q18164670",
+    "wikipedia": "https://vi.wikipedia.org/wiki/Bảo_tàng_Quân_khu_5,_Đà_Nẵng"
+  },
+  {
+    "name": "Bảo tàng Lực lượng Vũ trang miền Đông Nam Bộ",
+    "lat": 10.8,
+    "lon": 106.666,
+    "province": "TP.HCM",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vietnam-021-3rd-Field-front.jpg",
+    "description": "bảo tàng quân sự ở Thành phố Hồ Chí Minh, Việt Nam",
+    "heritage": "http://www.wikidata.org/entity/Q18207723",
+    "wikipedia": "https://vi.wikipedia.org/wiki/Bảo_tàng_Lực_lượng_Vũ_trang_miền_Đông_Nam_Bộ"
+  },
+  {
+    "name": "Bảo tàng Nghệ thuật Di sản vô giá",
+    "lat": 15.877233,
+    "lon": 108.334205,
+    "province": "Quảng Nam",
+    "image": "",
+    "description": "museum located in Hoi An, Vietnam",
+    "heritage": "http://www.wikidata.org/entity/Q30744118",
+    "wikipedia": "https://vi.wikipedia.org/wiki/Bảo_tàng_Nghệ_thuật_Di_sản_vô_giá"
+  },
+  {
+    "name": "Bảo tàng Tổng hợp tỉnh Bình Định",
+    "lat": 13.771179985,
+    "lon": 109.233507646,
+    "province": "Bình Định",
+    "image": "",
+    "description": "Bảo tàng ở Bình Định",
+    "heritage": "http://www.wikidata.org/entity/Q65165794",
+    "wikipedia": "https://vi.wikipedia.org/wiki/Bảo_tàng_Tổng_hợp_tỉnh_Bình_Định"
+  },
+  {
+    "name": "Bảo tàng tỉnh Thanh Hóa",
+    "lat": 19.81524155,
+    "lon": 105.7801022,
+    "province": "Thanh Hóa",
+    "image": "",
+    "description": "Bảo tàng tại Thanh Hóa",
+    "heritage": "http://www.wikidata.org/entity/Q108866931",
+    "wikipedia": "https://vi.wikipedia.org/wiki/Bảo_tàng_tỉnh_Thanh_Hóa"
+  },
+  {
+    "name": "Bảo tàng tỉnh Yên Bái",
+    "lat": 21.728265116,
+    "lon": 104.899701212,
+    "province": "Yên Bái",
+    "image": "",
+    "description": "Bảo tàng tại Yên Bái",
+    "heritage": "http://www.wikidata.org/entity/Q108872896",
+    "wikipedia": "https://vi.wikipedia.org/wiki/Bảo_tàng_tỉnh_Yên_Bái"
+  },
+  {
+    "name": "Bảo tàng tỉnh Nam Định",
+    "lat": 20.424513864,
+    "lon": 106.173721023,
+    "province": "Nam Định",
+    "image": "",
+    "description": "Bảo tàng ở Nam Định",
+    "heritage": "http://www.wikidata.org/entity/Q109120707",
+    "wikipedia": "https://vi.wikipedia.org/wiki/Bảo_tàng_tỉnh_Nam_Định"
+  },
+  {
+    "name": "Bảo tàng tỉnh Hà Tĩnh",
+    "lat": 18.343992534,
+    "lon": 105.903972,
+    "province": "Hà Tĩnh",
+    "image": "",
+    "description": "Bảo tàng ở Hà Tĩnh",
+    "heritage": "http://www.wikidata.org/entity/Q109121937",
+    "wikipedia": "https://vi.wikipedia.org/wiki/Bảo_tàng_tỉnh_Hà_Tĩnh"
+  },
+  {
+    "name": "Bảo tàng tỉnh Bình Dương",
+    "lat": 10.9902759,
+    "lon": 106.663269976,
+    "province": "Bình Dương",
+    "image": "",
+    "description": "Bảo tàng ở Bình Dương",
+    "heritage": "http://www.wikidata.org/entity/Q109289165",
+    "wikipedia": "https://vi.wikipedia.org/wiki/Bảo_tàng_tỉnh_Bình_Dương"
+  },
+  {
+    "name": "Bảo tàng tỉnh Đồng Tháp",
+    "lat": 10.45432618,
+    "lon": 105.632638446,
+    "province": "Đồng Tháp",
+    "image": "",
+    "description": "Bảo tàng ở Đồng Tháp",
+    "heritage": "http://www.wikidata.org/entity/Q109378264",
+    "wikipedia": "https://vi.wikipedia.org/wiki/Bảo_tàng_tỉnh_Đồng_Tháp"
+  },
+  {
+    "name": "Bảo tàng tỉnh Long An",
+    "lat": 10.528579175,
+    "lon": 106.394112369,
+    "province": "Long An",
+    "image": "",
+    "description": "Bảo tàng ở Long An",
+    "heritage": "http://www.wikidata.org/entity/Q109425809",
+    "wikipedia": "https://vi.wikipedia.org/wiki/Bảo_tàng_tỉnh_Long_An"
+  },
+  {
+    "name": "Bảo tàng tỉnh Hải Dương",
+    "lat": 20.944332719,
+    "lon": 106.3302109,
+    "province": "Hải Dương",
+    "image": "",
+    "description": "Bảo tàng tại Hải Dương",
+    "heritage": "http://www.wikidata.org/entity/Q110889091",
+    "wikipedia": "https://vi.wikipedia.org/wiki/Bảo_tàng_tỉnh_Hải_Dương"
+  },
+  {
+    "name": "Bảo tàng tỉnh Lạng Sơn",
+    "lat": 21.845154757,
+    "lon": 106.757729784,
+    "province": "Lạng Sơn",
+    "image": "",
+    "description": "Bảo tàng ở Lạng Sơn",
+    "heritage": "http://www.wikidata.org/entity/Q111016726",
+    "wikipedia": "https://vi.wikipedia.org/wiki/Bảo_tàng_tỉnh_Lạng_Sơn"
+  },
+  {
+    "name": "Bảo tàng tỉnh Hà Giang",
+    "lat": 22.831260325,
+    "lon": 104.983967561,
+    "province": "Hà Giang",
+    "image": "",
+    "description": "Bảo tàng tại Hà Giang",
+    "heritage": "http://www.wikidata.org/entity/Q111164669",
+    "wikipedia": "https://vi.wikipedia.org/wiki/Bảo_tàng_tỉnh_Hà_Giang"
+  },
+  {
+    "name": "Bảo tàng Lịch sử Thừa Thiên Huế",
+    "lat": 16.472412074,
+    "lon": 107.581772853,
+    "province": "Huế",
+    "image": "",
+    "description": "Bảo tàng tại Huế",
+    "heritage": "http://www.wikidata.org/entity/Q111188078",
+    "wikipedia": "https://vi.wikipedia.org/wiki/Bảo_tàng_Lịch_sử_Thừa_Thiên_Huế"
+  },
+  {
+    "name": "Bảo tàng tỉnh Bạc Liêu",
+    "lat": 9.287662768,
+    "lon": 105.72518463,
+    "province": "Bạc Liêu",
+    "image": "",
+    "description": "Bảo tàng ở Bạc Liêu",
+    "heritage": "http://www.wikidata.org/entity/Q111427470",
+    "wikipedia": "https://vi.wikipedia.org/wiki/Bảo_tàng_tỉnh_Bạc_Liêu"
+  },
+  {
+    "name": "Bảo tàng tỉnh Quảng Nam",
+    "lat": 15.579918402,
+    "lon": 108.475584215,
+    "province": "Quảng Nam",
+    "image": "",
+    "description": "Bảo tàng ở Quảng Nam",
+    "heritage": "http://www.wikidata.org/entity/Q111427748",
+    "wikipedia": "https://vi.wikipedia.org/wiki/Bảo_tàng_tỉnh_Quảng_Nam"
+  },
+  {
+    "name": "Bảo tàng Quảng Ninh",
+    "lat": 20.948765313,
+    "lon": 107.097489224,
+    "province": "Quảng Ninh",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Quang%20Ninh%20Museum%20facade%201.jpg",
+    "description": "bảo tàng tại Việt Nam",
+    "heritage": "http://www.wikidata.org/entity/Q112182634",
+    "wikipedia": "https://vi.wikipedia.org/wiki/Bảo_tàng_Quảng_Ninh"
+  },
+  {
+    "name": "Bảo tàng Đồng Nai",
+    "lat": 10.95845782,
+    "lon": 106.82962249,
+    "province": "Đồng Nai",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Dong%20Nai%20Museum%20facade.jpg",
+    "description": "Tòa nhà và trưng bày của Bảo tàng Đồng Nai",
+    "heritage": "http://www.wikidata.org/entity/Q112648602",
+    "wikipedia": "https://vi.wikipedia.org/wiki/Bảo_tàng_Đồng_Nai"
+  },
+  {
+    "name": "Bảo tàng Hội An",
+    "lat": 15.879,
+    "lon": 108.329,
+    "province": "Quảng Nam",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Hoi%20An%20Museum%20main%20building.jpg",
+    "description": "history museum in Hội An, Vietnam",
+    "heritage": "http://www.wikidata.org/entity/Q114397271",
+    "wikipedia": "https://vi.wikipedia.org/wiki/Bảo_tàng_Hội_An"
+  }
+]

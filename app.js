@@ -13,6 +13,26 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 let allMarkers = [];
 let globalData = [];
+let heritageData = [];
+let museumData = [];
+
+// --- Tạo icon riêng cho museum và heritage ---
+const museumIcon = L.icon({
+  iconUrl: 'https://cdn.jsdelivr.net/gh/pointhi/leaflet-color-markers@master/img/marker-icon-blue.png',
+  shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
+});
+const heritageIcon = L.icon({
+  iconUrl: 'https://cdn.jsdelivr.net/gh/pointhi/leaflet-color-markers@master/img/marker-icon-green.png',
+  shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
+});
 
 // Hàm render marker
 function renderMarkers(data) {
@@ -20,9 +40,13 @@ function renderMarkers(data) {
   allMarkers = [];
 
   data.forEach(item => {
-    var marker = L.marker([item.lat, item.lon]).addTo(map);
+    let icon = item.type === 'museum' ? museumIcon : heritageIcon;
+    var marker = L.marker([item.lat, item.lon], {icon}).addTo(map);
     marker.bindPopup(`
       <b>${item.name}</b><br>
+      <span style="color:${item.type === 'museum' ? '#2980b9' : '#16a085'}">
+        <b>${item.type === 'museum' ? 'Bảo tàng' : 'Di sản'}</b>
+      </span><br>
       <i>${item.province}</i><br>
       <p>${item.description || "Chưa có mô tả"}</p>
       <img src="${item.image}" alt="Chưa có ảnh" width="200" /><br>
@@ -43,11 +67,17 @@ function renderMarkers(data) {
 fetch('data/heritage.json')
   .then(res => res.json())
   .then(data => {
-    globalData = data;
-    renderMarkers(data);
-    showChart(data);
-    updateStats(data);
-    populateProvinceFilter(data);
+    heritageData = data.map(item => ({...item, type: 'heritage'}));
+    fetch('data/museums.json')
+      .then(res => res.json())
+      .then(museums => {
+        museumData = museums.map(item => ({...item, type: 'museum'}));
+        globalData = heritageData.concat(museumData);
+        renderMarkers(globalData);
+        showChart(globalData);
+        updateStats(globalData);
+        populateProvinceFilter(globalData);
+      });
   });
 
 // Hàm mở Google Maps để chỉ đường
@@ -98,8 +128,10 @@ function filterByProvince() {
 }
 
 function updateStats(data) {
-  document.getElementById('stats').innerText = 
-    "Tổng số di sản: " + data.length;
+  const heritageCount = data.filter(i => i.type === 'heritage').length;
+  const museumCount = data.filter(i => i.type === 'museum').length;
+  document.getElementById('stats').innerText =
+    `Tổng số di sản: ${heritageCount} | Tổng số bảo tàng: ${museumCount} | Tổng cộng: ${data.length}`;
 }
 
 
@@ -117,33 +149,45 @@ function searchData() {
 
 // Biểu đồ
 function showChart(data) {
-  const counts = {};
+  // Thống kê số heritage và museum theo tỉnh
+  const heritageCounts = {};
+  const museumCounts = {};
   data.forEach(item => {
-    let province = item.province || "Không rõ"; // lấy tỉnh từ JSON
-    counts[province] = (counts[province] || 0) + 1;
+    let province = item.province || "Không rõ";
+    if (item.type === 'heritage')
+      heritageCounts[province] = (heritageCounts[province] || 0) + 1;
+    else if (item.type === 'museum')
+      museumCounts[province] = (museumCounts[province] || 0) + 1;
   });
+
+  const provinces = Array.from(new Set([...Object.keys(heritageCounts), ...Object.keys(museumCounts)]));
 
   const ctx = document.getElementById('chart').getContext('2d');
   if (window.myChart) window.myChart.destroy();
   window.myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: Object.keys(counts),
-      datasets: [{
-        label: 'Số di sản',
-        data: Object.values(counts),
-        backgroundColor: 'rgba(52, 152, 219, 0.6)'
-      }]
+      labels: provinces,
+      datasets: [
+        {
+          label: 'Di sản',
+          data: provinces.map(p => heritageCounts[p] || 0),
+          backgroundColor: 'rgba(22, 160, 133, 0.6)'
+        },
+        {
+          label: 'Bảo tàng',
+          data: provinces.map(p => museumCounts[p] || 0),
+          backgroundColor: 'rgba(52, 152, 219, 0.6)'
+        }
+      ]
     },
     options: {
       responsive: true,
       maintainAspectRatio: false,
-      plugins: { legend: { display: false } },
+      plugins: { legend: { display: true } },
       scales: {
-    x: {
-      ticks: { autoSkip: false }  // để không bị ẩn nhãn khi hẹp
-    }
-  }
+        x: { ticks: { autoSkip: false } }
+      }
     }
   });
 }
@@ -221,4 +265,3 @@ togglePanelBtn.addEventListener('click', function() {
     updateMapHeight();
   }
 });
-
